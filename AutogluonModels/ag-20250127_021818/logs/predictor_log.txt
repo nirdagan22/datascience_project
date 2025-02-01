@@ -1,0 +1,57 @@
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250127_021818'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       3.66 GB / 16.00 GB (22.9%)
+Disk Space Avail:   14.79 GB / 228.27 GB (6.5%)
+===================================================
+Setting presets to: bolt_base
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'hyperparameters': {'Chronos': {'model_path': 'bolt_base'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 100,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'price actual',
+ 'verbosity': 2}
+
+Inferred time series frequency: 'H'
+Provided train_data has 28050 rows, 1 time series. Median time series length is 28050 (min=28050, max=28050). 
+
+Provided data contains following columns:
+	target: 'price actual'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['generation biomass', 'generation f... coal/lignite', 'generation fossil gas', 'generation fossil hard coal', 'generation fossil oil', 'generation h...e consumption', ...]
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['snow_3h_ Barcelona', 'snow_3h_Seville']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-01-27 04:18:19
+Models that will be trained: ['Chronos[bolt_base]']
+Training timeseries model Chronos[bolt_base]. 
+	0.04    s     = Training runtime
+Training complete. Models trained: ['Chronos[bolt_base]']
+Total runtime: 0.06 s
+Best model: Chronos[bolt_base]
+Model not specified in predict, will default to the model with the best validation score: Chronos[bolt_base]
+Model not specified in predict, will default to the model with the best validation score: Chronos[bolt_base]
