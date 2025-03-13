@@ -1,0 +1,597 @@
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_172934'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.62 GB / 16.00 GB (28.9%)
+Disk Space Avail:   4.79 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 50,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_173455'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.95 GB / 16.00 GB (30.9%)
+Disk Space Avail:   4.78 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 50,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+Inferred time series frequency: 'D'
+Provided train_data has 1752 rows, 1 time series. Median time series length is 1752 (min=1752, max=1752). 
+
+Provided data contains following columns:
+	target: 'Close'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['Open', 'High', 'Low', 'Volume']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 19:34:55
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-7.1883       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	3.23    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-4.7411       = Validation score (-RMSE)
+	1.55    s     = Training runtime
+	0.45    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-22.9395      = Validation score (-RMSE)
+	2.99    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-66.6612      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.38    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-4.4212       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	14.42   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-4.3262       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.31    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-4.0057       = Validation score (-RMSE)
+	0.02    s     = Training runtime
+	4.16    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Skipping covariate_regressor since the dataset contains no covariates or static features.
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TemporalFusionTransformer. 
+	Warning: Exception caused TemporalFusionTransformer to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Fitting simple weighted ensemble.
+	Ensemble weights: {'ChronosZeroShot[bolt_base]': 1.0}
+	-4.0057       = Validation score (-RMSE)
+	0.30    s     = Training runtime
+	4.16    s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'WeightedEnsemble']
+Total runtime: 31.53 s
+Best model: ChronosZeroShot[bolt_base]
+Best model score: -4.0057
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_base]
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_base]
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_173919'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.54 GB / 16.00 GB (28.4%)
+Disk Space Avail:   4.79 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_174134'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       5.12 GB / 16.00 GB (32.0%)
+Disk Space Avail:   4.79 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'freq': 'B',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+train_data with frequency 'None' has been resampled to frequency 'B'.
+Provided train_data has 1252 rows (NaN fraction=3.5%), 1 time series. Median time series length is 1252 (min=1252, max=1252). 
+
+Provided data contains following columns:
+	target: 'Close'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['Open', 'High', 'Low', 'Volume']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 19:41:34
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-3.8042       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	2.80    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-3.3137       = Validation score (-RMSE)
+	1.05    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-7.3966       = Validation score (-RMSE)
+	7.00    s     = Training runtime
+	0.11    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-73.5444      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.18    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-1.9443       = Validation score (-RMSE)
+	0.02    s     = Training runtime
+	14.02   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-1.8753       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-3.0586       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	3.14    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Skipping covariate_regressor since the dataset contains no covariates or static features.
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TemporalFusionTransformer. 
+	Warning: Exception caused TemporalFusionTransformer to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Fitting simple weighted ensemble.
+	Ensemble weights: {'AutoETS': 1.0}
+	-1.8753       = Validation score (-RMSE)
+	0.37    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'WeightedEnsemble']
+Total runtime: 31.96 s
+Best model: AutoETS
+Best model score: -1.8753
+data with frequency 'None' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: AutoETS
+data with frequency 'None' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: AutoETS
+data with frequency 'D' has been resampled to frequency 'B'.
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_174249'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.99 GB / 16.00 GB (31.2%)
+Disk Space Avail:   4.78 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'freq': 'B',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 50,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+train_data with frequency 'None' has been resampled to frequency 'B'.
+Provided train_data has 1252 rows (NaN fraction=3.5%), 1 time series. Median time series length is 1252 (min=1252, max=1252). 
+
+Provided data contains following columns:
+	target: 'Close'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['Open', 'High', 'Low', 'Volume']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 19:42:49
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-11.3291      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	2.85    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-3.8872       = Validation score (-RMSE)
+	1.21    s     = Training runtime
+	0.48    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-23.6156      = Validation score (-RMSE)
+	2.00    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-65.8450      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.42    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-9.4265       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	13.84   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-9.0159       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.02    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-13.2119      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	2.44    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Skipping covariate_regressor since the dataset contains no covariates or static features.
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TemporalFusionTransformer. 
+	Warning: Exception caused TemporalFusionTransformer to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Fitting simple weighted ensemble.
+	Ensemble weights: {'RecursiveTabular': 1.0}
+	-3.8872       = Validation score (-RMSE)
+	0.35    s     = Training runtime
+	0.48    s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'WeightedEnsemble']
+Total runtime: 26.91 s
+Best model: RecursiveTabular
+Best model score: -3.8872
+data with frequency 'None' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: RecursiveTabular
+data with frequency 'D' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: RecursiveTabular
+data with frequency 'D' has been resampled to frequency 'B'.
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_174902'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.78 GB / 16.00 GB (29.9%)
+Disk Space Avail:   4.77 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'freq': 'B',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+train_data with frequency 'None' has been resampled to frequency 'B'.
+Provided train_data has 1252 rows (NaN fraction=3.5%), 1 time series. Median time series length is 1252 (min=1252, max=1252). 
+
+Provided data contains following columns:
+	target: 'Close'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['Open', 'High', 'Low', 'Volume']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 19:49:05
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-3.8042       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	3.08    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-3.3137       = Validation score (-RMSE)
+	0.94    s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-7.3966       = Validation score (-RMSE)
+	7.09    s     = Training runtime
+	0.10    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-69.5292      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.14    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-1.9443       = Validation score (-RMSE)
+	0.02    s     = Training runtime
+	13.03   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-1.8753       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	0.99    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-3.0586       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	7.02    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Skipping covariate_regressor since the dataset contains no covariates or static features.
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TemporalFusionTransformer. 
+	Warning: Exception caused TemporalFusionTransformer to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Fitting simple weighted ensemble.
+	Ensemble weights: {'AutoETS': 1.0}
+	-1.8753       = Validation score (-RMSE)
+	0.47    s     = Training runtime
+	0.99    s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'WeightedEnsemble']
+Total runtime: 35.34 s
+Best model: AutoETS
+Best model score: -1.8753
+data with frequency 'None' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: AutoETS
+data with frequency 'None' has been resampled to frequency 'B'.
+Model not specified in predict, will default to the model with the best validation score: AutoETS
+data with frequency 'None' has been resampled to frequency 'B'.
+data with frequency 'None' has been resampled to frequency 'B'.
+data with frequency 'None' has been resampled to frequency 'B'.
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250310_175210'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       4.76 GB / 16.00 GB (29.8%)
+Disk Space Avail:   4.77 GB / 228.27 GB (2.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'freq': 'B',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
+train_data with frequency 'None' has been resampled to frequency 'B'.
+Provided train_data has 1252 rows (NaN fraction=3.5%), 1 time series. Median time series length is 1252 (min=1252, max=1252). 
+
+Provided data contains following columns:
+	target: 'Close'
+	past_covariates:
+		categorical:        []
+		continuous (float): ['Open', 'High', 'Low', 'Volume']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'RMSE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 19:52:11
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-3.8042       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	3.14    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-3.3137       = Validation score (-RMSE)
+	0.95    s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-7.3966       = Validation score (-RMSE)
+	7.71    s     = Training runtime
+	0.11    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-69.9824      = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	1.16    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-1.9443       = Validation score (-RMSE)
+	0.02    s     = Training runtime
+	12.91   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-1.8753       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	2.33    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-3.0586       = Validation score (-RMSE)
+	0.01    s     = Training runtime
+	2.33    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Skipping covariate_regressor since the dataset contains no covariates or static features.
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TemporalFusionTransformer. 
+	Warning: Exception caused TemporalFusionTransformer to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	No module named 'torch._C._dynamo.guards'; 'torch._C._dynamo' is not a package
+Fitting simple weighted ensemble.
+	Ensemble weights: {'AutoETS': 1.0}
+	-1.8753       = Validation score (-RMSE)
+	0.36    s     = Training runtime
+	2.33    s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'WeightedEnsemble']
+Total runtime: 32.67 s
+Best model: AutoETS
+Best model score: -1.8753
+data with frequency 'None' has been resampled to frequency 'B'.
+data with frequency 'None' has been resampled to frequency 'B'.

@@ -1,0 +1,30 @@
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/nirdagan/Desktop/datascience_project/AutogluonModels/ag-20250313_120403'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.11
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 22.6.0: Mon Apr 22 20:50:39 PDT 2024; root:xnu-8796.141.3.705.2~1/RELEASE_ARM64_T8103
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       3.68 GB / 16.00 GB (23.0%)
+Disk Space Avail:   15.04 GB / 228.27 GB (6.6%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': RMSE,
+ 'freq': 'B',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Close',
+ 'verbosity': 2}
+
